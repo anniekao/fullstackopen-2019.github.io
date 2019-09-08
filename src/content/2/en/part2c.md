@@ -110,7 +110,7 @@ When an asynchronous operation is completed, or more specifically, at some point
 
 Currently, JavaScript engines are <i>single-threaded</i>, which means that they cannot execute code in parallel. As a result, it is a requirement in practise to use a non-blocking model for executing IO operations. Otherwise, the browser would "freeze" during, for instance, the fetching of data from a server.
 
-Another consequence of this single threaded nature of Javascript engines is that if some code execution takes up a lot of time, the browser will get stuck for the duration of the execution. If we added the following code at the top of our application:
+Another consequence of this single threaded nature of Javascript engines is that if some code execution takes up a lot of time, the browser will be stuck for the duration of the execution. If we added the following code at the top of our application:
 
 ```js
 setTimeout(() => {
@@ -587,7 +587,7 @@ Modify the application such that the initial state of the data is fetched from t
 
 The API [https://restcountries.eu](https://restcountries.eu) provides a lot data for different countries in a machine readable format, a so-called REST API.
 
-Create an application, using which one can look at data of various countries. The application should probably get the data from the endpoint [all](https://restcountries.eu/#api-endpoints-all).
+Create an application that will fetch the data of various countries. The application should probably get the data from the endpoint [all](https://restcountries.eu/#api-endpoints-all).
 
 The user interface is very simple. The country to be shown is found by typing a search query into the search field.
 
